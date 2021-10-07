@@ -36,7 +36,7 @@ useEffect(()=>{
 },[Propertyimage])
 
 useEffect(()=>{
-    fetch(`http://localhost:5000/updatepost/${props.match.params.idname}`,{
+    fetch(`https://mern-app-realestate.herokuapp.com/updatepost/${props.match.params.idname}`,{
         method:"get",
         headers:{
             "Authorization":"Bearer "+localStorage.getItem('jwt')
@@ -56,7 +56,7 @@ useEffect(()=>{
 },[])
 
 const updateData = ()=>{
-    const url = `http://localhost:5000/updatepost/${props.match.params.idname}`
+    const url = `https://mern-app-realestate.herokuapp.com/updatepost/${props.match.params.idname}`
     Axios.put(url,property).then(()=>{props.history.push('/admin/myproperties')})                    
 }
     return(<>

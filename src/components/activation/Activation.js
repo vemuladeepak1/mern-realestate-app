@@ -15,7 +15,7 @@ const Activation = (props)=>{
         if(activation_token){
             const activationEmail = async () => {
                 try {
-                    const res = await axios.post(`http://localhost:5000/activation/${activation_token}`)
+                    const res = await axios.post(`https://mern-app-realestate.herokuapp.com/activation/${activation_token}`)
                     setSuccess(res.data.msg)
                 } catch (err) {
                     err.response.data.msg && setErr(err.response.data.msg)

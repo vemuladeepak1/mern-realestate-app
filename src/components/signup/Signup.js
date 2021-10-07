@@ -42,7 +42,7 @@ const Signup = (props) => {
             toast.error("Please enter valid phonenumber")
             return
         }
-        fetch("http://localhost:5000/signup", {
+        fetch("https://mern-app-realestate.herokuapp.com/signup", {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
@@ -85,7 +85,7 @@ const Signup = (props) => {
     const sendOTP = () => {
 
         console.log(phonenumber)
-        fetch(`http://localhost:5000/sendotp?phonenumber=${phonenumber}&channel=sms`,
+        fetch(`https://mern-app-realestate.herokuapp.com/sendotp?phonenumber=${phonenumber}&channel=sms`,
             {
                 method: "get",
 
@@ -109,7 +109,7 @@ const Signup = (props) => {
     const validateOTP = () => {
         // console.log(code)
         // console.log(phonenumber)
-        fetch(`http://localhost:5000/verifyotp?phonenumber=${phonenumber}&code=${code}`,
+        fetch(`https://mern-app-realestate.herokuapp.com/verifyotp?phonenumber=${phonenumber}&code=${code}`,
             {
                 method: "get",
 

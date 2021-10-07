@@ -7,7 +7,7 @@ const Createposts = (props)=>{
     const [url,setUrl] = useState("")
     useEffect(()=>{
         if(url){
-            fetch("http://localhost:5000/createpost",{
+            fetch("https://mern-app-realestate.herokuapp.com/createpost",{
                 method:"post",
                 headers:{
                     "Content-Type":"application/json",

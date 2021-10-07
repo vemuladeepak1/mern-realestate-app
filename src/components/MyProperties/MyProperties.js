@@ -5,7 +5,7 @@ const MyProperties = (props)=>{
     const [result,setResult]=useState([])
     useEffect(()=>{
       
-        fetch("http://localhost:5000/myproperties",{
+        fetch("https://mern-app-realestate.herokuapp.com/myproperties",{
             method:"get",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem('jwt')
@@ -25,7 +25,7 @@ const MyProperties = (props)=>{
     },[])
 
     const deletePost=(id)=>{
-        fetch(`http://localhost:5000/deletepost/${id}`,{
+        fetch(`https://mern-app-realestate.herokuapp.com/deletepost/${id}`,{
           method:"delete",
           headers:{
             "Authorization":"Bearer "+localStorage.getItem('jwt')

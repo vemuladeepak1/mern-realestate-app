@@ -40,7 +40,7 @@ const AddProperty = (props) => {
    const { pTitle,pDescription,status,type,rooms,price,sqft,image,address,city,State,country,gLat,gLng,sAge,sRooms,sBathrooms,name,uName,email,phone,airCondition,
    CentralHeating,SwimmingPool,LaundryRoom,WindowCovering,Refrigerator,Alarm,Gym,MicroWave} = property
    const postData = ()=>{
-    fetch("http://localhost:5000/createpost",{
+    fetch("https://mern-app-realestate.herokuapp.com/createpost",{
                         method:"post",
                         headers:{
                             "Content-Type":"application/json"

@@ -9,7 +9,7 @@ const Home = (props)=> {
   
     useEffect(()=>{
       
-        fetch("http://localhost:5000/allposts",{
+        fetch("https://mern-app-realestate.herokuapp.com/allposts",{
             method:"get",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem('jwt')
@@ -29,7 +29,7 @@ const Home = (props)=> {
     },[])
 
     const deletePost=(id)=>{
-      fetch(`http://localhost:5000/delete/${id}`,{
+      fetch(`https://mern-app-realestate.herokuapp.com/delete/${id}`,{
         method:"delete",
         headers:{
           "Authorization":"Bearer "+localStorage.getItem('jwt')
